@@ -11,13 +11,15 @@ const nextConfig = {
   assetPrefix: isProd ? `/${repoName}/` : "",
 
   trailingSlash: true,
+
   images: {
     unoptimized: true,
     remotePatterns: imageHosts,
   },
 
-  productionBrowserSourceMaps: true,
-  distDir: process.env.DIST_DIR || ".next",
+  productionBrowserSourceMaps: false, 
+
+  distDir: ".next",
 
   typescript: {
     ignoreBuildErrors: true,

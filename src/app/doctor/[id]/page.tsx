@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, use } from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import AppImage from '@/components/ui/AppImage';
@@ -8,12 +8,11 @@ import { useLang } from '@/app/components/LanguageProvider';
 import { doctors } from '@/app/components/doctorsData';
 
 interface PageProps {
-  params: Promise<{ id: string }>;
+  params: { id: string };
 }
 
 export default function DoctorProfilePage({ params }: PageProps) {
-  // Unwrap the promise inside 'use client' for Next.js 15 compatibility
-  const { id } = use(params);
+  const { id } = params;
   const { t, lang } = useLang();
   
   const [selectedDay, setSelectedDay] = useState<string | null>(null);

@@ -1,0 +1,2 @@
+(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[177],{981:(a,e,s)=>{Promise.resolve().then(s.t.bind(s,3070,23)),Promise.resolve().then(s.t.bind(s,8830,23))},8830:()=>{},3070:a=>{a.exports={style:{fontFamily:"'Plus Jakarta Sans', 'Plus Jakarta Sans Fallback'",fontStyle:"normal"},className:"__className_71430a",variable:"__variable_71430a"}}},a=>{var e=e=>a(a.s=e);a.O(0,[537,441,517,358],()=>e(981)),_N_E=a.O()}]);
+//# sourceMappingURL=layout-cd301f89f106733a.js.map

@@ -1,14 +1,14 @@
 import { imageHosts } from './image-hosts.config.mjs';
 
-const isProd = process.env.NODE_ENV === 'production';
+const isGithubPages = process.env.GITHUB_PAGES === 'true';
 const repoName = 'medirendez';
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: "export",
 
-  basePath: isProd ? `/${repoName}` : "",
-  assetPrefix: isProd ? `/${repoName}/` : "",
+  basePath: isGithubPages ? `/${repoName}` : "",
+  assetPrefix: isGithubPages ? `/${repoName}/` : "",
 
   trailingSlash: true,
 
@@ -17,7 +17,7 @@ const nextConfig = {
     remotePatterns: imageHosts,
   },
 
-  productionBrowserSourceMaps: false, 
+  productionBrowserSourceMaps: false,
 
   distDir: ".next",
 
